@@ -20,7 +20,18 @@ export class CalculatorState {
         const state = ctx.getState()
         let op = payload as OperationName
 
-        if (state.operations == "") { return } 
+        if (state.operations == "") { 
+
+            if (state.result != "0" && Boolean(Number(state.result))){
+                ctx.setState({
+                    ...state,
+                    operations: `${state.result} ${operationsSymbolMap[op]}`,
+                    result: ""
+                })
+                return
+            }
+            return // this is lazy yes ik
+        } 
 
         let slicedOperations = state.operations.split(" ")
 
