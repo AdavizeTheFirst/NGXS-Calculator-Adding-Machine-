@@ -1,7 +1,11 @@
 # NGXS-Calculator-Adding-Machine-
 A basic calculator that uses NGXS for state management
 
+## Demo
+https://ngxscalc.netlify.app
 
+
+# Development
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
 
 ## Development server
