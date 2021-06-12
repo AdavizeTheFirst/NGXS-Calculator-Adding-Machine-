@@ -1,0 +1,18 @@
+<div class="keypad">
+    <div class="values" (click)="valueInput($event.target)">
+        <ng-container *ngFor="let val of valuesRange">
+            <button  [attr.data-value]="val" class="value">
+                {{val}}
+            </button>
+        </ng-container>
+        <button data-value="reset" class="value">C</button>
+        <button data-value="clear" class="value">&lt;</button>
+    </div>
+    <div class="operations" (click)="operationInput($event.target)">
+        <button class="operation-btn" data-operation-name="divide">/</button>
+        <button class="operation-btn" data-operation-name="multiply">×</button>
+        <button class="operation-btn" data-operation-name="subtract">-</button>
+        <button class="operation-btn" data-operation-name="add">+</button>
+    </div>
+    <button id="equals-btn"(click)="calculate()">=</button>
+</div>
